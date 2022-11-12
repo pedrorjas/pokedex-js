@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--Nosso CSS-->
+    <link rel="stylesheet" href="./assets/css/detail_pokemon.css">
+    
+    <!--Fonte Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="content">
+        <div>
+            <h1>Pokedex</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html">
+                <button id="backButton" type="button" class="back-button commum">
+                    Back
+                </button>
+            </a>            
+            
+            <button id="fevoriteButton" type="button" class="fevorite-button commum">
+                Fevorite
+            </button>
+        </nav>
+
+        <div class= "pokemon-detail">
+            <h1 class="nome-pokemon">Bulbasaur</h1>
+            <div class="list-detail">
+                <span class="number">001</span>
+            <ol id="types" class="types">
+                <li class="type">grass</li>
+                <li class="type">poison</li>
+            </ol>
+            <div class="img-pokemon">
+            <img src="bulbasaur.png" alt="Bulbasaur">
+            </div>
+            <!-- Tabs details -->
+            <div class="tab-detail">
+                <!-- Tabs buttons -->
+            <div class="tab-button">
+                <button id="bt-Aboult" class="button" style="text-decoration-line: underline" onclick="tabButton('Aboult', 'bt-Aboult')">Aboult</button>
+                <button id="bt-Base" class="button" onclick="tabButton('Base', 'bt-Base')">Base Status</button>
+                <button id="bt-Evolution" class="button" onclick="tabButton('Evolution', 'bt-Evolution')">Evolution</button>
+                <button id="bt-Moves" class="button" onclick="tabButton('Moves', 'bt-Moves')">Moves</button>
+            </div>
+
+            <div id="Aboult" class="container-tabs tabName"><h4>Aboult</h4></div>
+            <div id="Base" class="container-tabs tabName" style="display:none"><h4>Base Status</h4></div>
+            <div id="Evolution" class="container-tabs tabName" style="display:none"><h4>Evolution</h4></div>
+            <div id="Moves" class="container-tabs tabName" style="display:none"><h4>Moves</h4></div>
+
+            </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

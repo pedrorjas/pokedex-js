@@ -17,8 +17,10 @@ body {
 
 
 .content h1{
+    text-align: center;
+    font-size: 2em;
     margin: 0;
-    padding: .5rem;
+    color: #5c5c5c;
 }
 
 @media screen and (min-width: 992px) {
