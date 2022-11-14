@@ -1,6 +1,8 @@
 const pokemonDetailHtml = document.getElementById('body');
-
+let isFill = true
 detailPokemon();
+
+
 
 function detailPokemon(){
     var pokemonId = sessionStorage.getItem('url');
@@ -11,15 +13,13 @@ function detailPokemon(){
         <h1>Pokedex</h1>
     </div>
     <nav class="nav">
-        <a href="index.html">
-            <button id="backButton" type="button" class="back-button commum">
+            <button id="backButton" onclick="backHomeButton()" type="button" class="back-button commum">
                 Back
             </button>
-        </a>            
         
-        <button id="fevoriteButton" type="button" class="fevorite-button commum">
-            Fevorite
-        </button>
+            <button id="fevoriteButton" onclick="fevoriteButton()" type="button" class="fevorite-button commum">
+                
+            </button>
     </nav>
 
     <div id="pokemonDetail" class= "pokemon-detail">
@@ -60,7 +60,7 @@ function detailPokemon(){
 
 
  function tabButton(tabName, button){
-    var y =document.getElementsByClassName("button");
+    var y = document.getElementsByClassName("button");
     var x = document.getElementsByClassName("tabName");
     for (let i = 0; i < x.length; i++) {
         x[i].style.display = "none";
@@ -68,4 +68,20 @@ function detailPokemon(){
     }
     document.getElementById(tabName).style.display = "block";
     document.getElementById(button).style.textDecorationLine = "underline";
+}
+
+function backHomeButton(){
+    window.location.href = "index.html";
+}
+
+function fevoriteButton(){
+    const favButton = document.getElementById("fevoriteButton");
+    console.log(isFill);
+    if(isFill){
+        favButton.style.backgroundImage = "url(/assets/image/heart_fill.svg)";
+        isFill = false
+    }else{
+        favButton.style.backgroundImage = "url(/assets/image/heart_unfill.svg)";
+        isFill = true
+    }
 }

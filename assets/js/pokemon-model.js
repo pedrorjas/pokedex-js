@@ -6,7 +6,6 @@ class Pokemon {
     types = [];
     photo;
     url;
-    Number;
 }
 
 class PokemonDetail {
