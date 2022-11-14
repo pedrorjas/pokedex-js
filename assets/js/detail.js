@@ -2,8 +2,6 @@ const pokemonDetailHtml = document.getElementById('body');
 let isFill = true
 detailPokemon();
 
-
-
 function detailPokemon(){
     var pokemonId = sessionStorage.getItem('url');
     pokeApi.getPokemon(pokemonId).then((pokemon) => {
@@ -57,7 +55,6 @@ function detailPokemon(){
     })     
    
  }
-
 
  function tabButton(tabName, button){
     var y = document.getElementsByClassName("button");
