@@ -5,6 +5,8 @@ class Pokemon {
     type;
     types = [];
     photo;
+    url;
+    Number;
 }
 
 class PokemonDetail {
@@ -13,4 +15,5 @@ class PokemonDetail {
     type = this.type;
     types = this.types;
     photo = this.photo;
+    url = this.url;
 }

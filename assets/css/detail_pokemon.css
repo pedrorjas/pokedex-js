@@ -7,12 +7,10 @@ body {
     background-color: #f6f8fc;
 }
 
-.content{
+.content .type{
     width: 100vw;
     height: 100vw;
     /* padding: 1rem; */
-    background-color: #49d0b0;
-    
 }
 
 .content h1{
