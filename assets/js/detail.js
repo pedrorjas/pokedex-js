@@ -75,10 +75,14 @@ function fevoriteButton(){
     const favButton = document.getElementById("fevoriteButton");
     console.log(isFill);
     if(isFill){
-        favButton.style.backgroundImage = "url(/assets/image/heart_fill.svg)";
+        favButton.style.background = "url(/assets/image/heart_fill.svg)";
+        favButton.style.backgroundRepeat = "no-repeat";
+        favButton.style.backgroundPositionX = "center";
         isFill = false
     }else{
-        favButton.style.backgroundImage = "url(/assets/image/heart_unfill.svg)";
+        favButton.style.background = "url(/assets/image/heart_unfill.svg)";
+        favButton.style.backgroundRepeat = "no-repeat";
+        favButton.style.backgroundPositionX = "center";
         isFill = true
     }
 }
