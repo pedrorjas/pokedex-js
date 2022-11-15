@@ -45,11 +45,11 @@ body {
 }
 
 .fevorite-button{
-    /* background-color: lightcoral; */
-    background: url(/assets/image/heart_unfill.svg);
+    background-color: transparent;
+    background-image: url(/assets/image/heart_unfill.svg);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-color: transparent;
+    
 }
 
 .pokemon-detail{
@@ -115,11 +115,14 @@ body {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .pokemon-detail .tab-detail .tab-button{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-top: 3rem;
     border-bottom: inset;
     padding-bottom: 0.5rem;
@@ -129,6 +132,20 @@ body {
     background: none;
     border: none;
     text-underline-offset: 0.9rem
+}
+
+.labelAtributo{
+    opacity: .7;
+}
+
+.aboultList{
+    display: flex;
+}
+.ability{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding-left: 5rem;
 }
 
 @media screen and (min-width: 992px) {

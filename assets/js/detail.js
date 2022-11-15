@@ -5,6 +5,7 @@ detailPokemon();
 function detailPokemon(){
     var pokemonId = sessionStorage.getItem('url');
     pokeApi.getPokemon(pokemonId).then((pokemon) => {
+        console.log(pokemon);
 
     const detailHtml = `<section class="content ${pokemon.type}">
     <div>
@@ -40,7 +41,30 @@ function detailPokemon(){
                             <button id="bt-Moves" class="button" onclick="tabButton('Moves', 'bt-Moves')">Moves</button>
                         </div>
 
-                        <div id="Aboult" class="container-tabs tabName"><h4>Aboult</h4></div>
+                        <div id="Aboult" class="container-tabs tabName">
+
+
+                        <ol class="aboultList">
+                            <label class=labelAtributo>Height</label>
+                        <li class="ability">${pokemon.height}</li>
+                            
+                            </ol>
+
+
+                            <ol class="aboultList">
+                            <label class=labelAtributo>Weight</label>
+                        <li class="ability">${pokemon.weight}</li>
+                            
+                            </ol>
+
+
+
+                            <ol class="aboultList">
+                            <label class=labelAtributo>Abilities</label>
+                        <li class="ability">${pokemon.abilities.map((ability) => " " + ability)}</li>
+                            
+                            </ol>
+                        </div>
                         <div id="Base" class="container-tabs tabName" style="display:none"><h4>Base Status</h4></div>
                         <div id="Evolution" class="container-tabs tabName" style="display:none"><h4>Evolution</h4></div>
                         <div id="Moves" class="container-tabs tabName" style="display:none"><h4>Moves</h4></div>
@@ -75,14 +99,10 @@ function fevoriteButton(){
     const favButton = document.getElementById("fevoriteButton");
     console.log(isFill);
     if(isFill){
-        favButton.style.background = "url(/assets/image/heart_fill.svg)";
-        favButton.style.backgroundRepeat = "no-repeat";
-        favButton.style.backgroundPositionX = "center";
+        favButton.style.backgroundImage = "url(/assets/image/heart_fill.svg)";
         isFill = false
     }else{
-        favButton.style.background = "url(/assets/image/heart_unfill.svg)";
-        favButton.style.backgroundRepeat = "no-repeat";
-        favButton.style.backgroundPositionX = "center";
+        favButton.style.backgroundImage = "url(/assets/image/heart_unfill.svg)";
         isFill = true
     }
 }

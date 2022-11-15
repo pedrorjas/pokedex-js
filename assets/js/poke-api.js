@@ -11,6 +11,12 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     pokemon.types = types;
     pokemon.type = type;
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+    const abilities = pokeDetail.abilities.map((typeSlot) => typeSlot.ability.name);
+    const [ability] = abilities;
+    pokemon.abilities = abilities
+    pokemon.ability = ability;
+    pokemon.height = "(0." + pokeDetail.height * 10 + " cm)";
+    pokemon.weight = "(" + pokeDetail.weight /10 + " kg)";
     return pokemon;
 }
 
