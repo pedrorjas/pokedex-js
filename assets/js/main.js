@@ -4,6 +4,8 @@ const clearResultButton = document.getElementById('clearResultButton');
 let offset = 0;
 const limit = 5;
 
+loadPokemonsItens(offset, limit);
+
 function loadPokemonsItens(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => `
