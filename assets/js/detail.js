@@ -8,12 +8,10 @@ function detailPokemon(){
         console.log(pokemon);
 
     const detailHtml = `<section class="content ${pokemon.type}">
-    <div>
-        <h1>Pokedex</h1>
-    </div>
+    <h1>Pokedex</h1>
     <nav class="nav">
             <button id="backButton" onclick="backHomeButton()" type="button" class="back-button commum">
-                Back
+                Home
             </button>
         
             <button id="fevoriteButton" onclick="fevoriteButton()" type="button" class="fevorite-button commum">
